@@ -1,23 +1,23 @@
 <div class="content">
   <div class="container">
-    <div class="out-put"><span></span></div>
+    <section class="out-put"><span>{{resulte}}</span></section>
     <table>
       <tr>
-        <td *ngFor="let item of ['+', '-', '*', '/']">{{item}}</td>
+        <td (click)="getAction(item)" *ngFor="let item of ['+', '-', '*', '/']">{{item}}</td>
       </tr>
       <tr>
-        <td *ngFor="let item of [7, 8, 9]">{{item}}</td>
-        <td  class="equal">=</td>
+        <td (click)="getAction(item)" *ngFor="let item of [7, 8, 9]">{{item}}</td>
+        <td rowspan="4"  class="equal" (click)="getEqual()">=</td>
       </tr>
       <tr>
-        <td *ngFor="let item of [4, 5, 6]">{{item}}</td>
+        <td (click)="getAction(item)" *ngFor="let item of [4, 5, 6]">{{item}}</td>
       </tr>
       <tr>
-        <td *ngFor="let item of [1, 2, 3]">{{item}}</td>
+        <td (click)="getAction(item)" *ngFor="let item of [1, 2, 3]">{{item}}</td>
       </tr>
       <tr>
-        <td *ngFor="let item of [0, '.']">{{item}}</td>
-        <td class="reset">AC</td>
+        <td (click)="getAction(item)" *ngFor="let item of [0, '.']">{{item}}</td>
+        <td class="reset" (click)="reset()">AC</td>
       </tr>
     </table>
   </div>

@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Calculator-By-Angular';
+  resulte = '';
+
+  getAction(item : any) {
+    this.resulte += item; // 5+7 not 7 after remove 5
+  }
+
+  getEqual() {
+    this.resulte = eval(this.resulte).toFixed(1);
+  }
+
+  reset() {
+    this.resulte = '';
+  }
 }

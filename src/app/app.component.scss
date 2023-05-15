@@ -8,8 +8,13 @@
   left: 50%;
   transform: translate(-50%, -50%);
   .out-put {
+    align-items: center;
     background-color: black;
-    width: 165px;
+    color: white;
+    text-align: end;
+    padding-right: 5px;
+    font-size: 25px;
+    width: 150px;
     height: 40px;
     position: absolute;
     top: -30px;
@@ -19,15 +24,19 @@
   tr {
     display: flex;
     gap: 10px;
-
   }
   td {
-    border: 1px solid rgb(133, 188, 241);
+    border: 1px solid rgb(191, 193, 195);
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 10px;
     width: 30px;
-    height: 20px;
-}
+    cursor: pointer;
+    }
+    .reset {
+      background-color: red;
+      color: white;
+      outline: none;
+    }
 }
